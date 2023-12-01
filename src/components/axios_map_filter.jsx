@@ -24,7 +24,6 @@ const MainComponent = () => {
         const response = await axios.get(
           "https://api.sampleapis.com/coffee/hot"
         );
-        console.log(response.data);
         setCoffee(response.data);
       } catch (err) {
         console.log(err);
