@@ -34,7 +34,7 @@ const MainComponent = () => {
 
   return (
     <div>
-      Hello World 2<h3>Map Usage</h3>
+      Hello World 2<h3>Restful api, Map Usage</h3>
       {coffee.map((coffee, index) => (
         <div>
           <div key={index}>
