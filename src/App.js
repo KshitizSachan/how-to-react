@@ -1,3 +1,8 @@
+import React, { lazy, Suspense } from 'react';
+import styles from "./App.css";
+
+
+import { MyContextProvider } from "./components/context/myContext";
 import Map_filter from "./components/restfulapi_axios_map_filter";
 import State from "./components/states";
 import EventHandling from "./components/eventHandling";
@@ -10,9 +15,9 @@ import Debouncing from "./components/debouncing";
 import Component1 from "./components/context/component1";
 import Component2 from "./components/context/component2";
 import ParentContext from "./components/context/parentComponent";
+const LazyComponent = lazy(() => import('./components/lazyLoading'));
 
-import { MyContextProvider } from "./components/context/myContext";
-import styles from "./App.css";
+
 
 function App() {
 
@@ -32,7 +37,9 @@ function App() {
           <Debouncing />
           <Component1 />
           <Component2 />
-     
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyComponent />
+          </Suspense>
     </ParentContext>
     </MyContextProvider>
   );
