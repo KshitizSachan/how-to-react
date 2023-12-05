@@ -15,6 +15,8 @@ import Debouncing from "./components/debouncing";
 import Component1 from "./components/context/component1";
 import Component2 from "./components/context/component2";
 import ParentContext from "./components/context/parentComponent";
+import HelperFunction from './components/helper_functions';
+
 const LazyComponent = lazy(() => import('./components/lazyLoading'));
 
 
@@ -40,6 +42,7 @@ function App() {
           <Suspense fallback={<div>Loading...</div>}>
             <LazyComponent />
           </Suspense>
+          <HelperFunction/>
     </ParentContext>
     </MyContextProvider>
   );
