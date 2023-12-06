@@ -16,6 +16,7 @@ import Component1 from "./components/context/component1";
 import Component2 from "./components/context/component2";
 import ParentContext from "./components/context/parentComponent";
 import HelperFunction from './components/helper_functions';
+import ArrayFunctions from './components/arrays_of_functions'
 
 const LazyComponent = lazy(() => import('./components/lazyLoading'));
 
@@ -43,6 +44,7 @@ function App() {
             <LazyComponent />
           </Suspense>
           <HelperFunction/>
+          <ArrayFunctions />
     </ParentContext>
     </MyContextProvider>
   );
