@@ -16,7 +16,10 @@ import Component1 from "./components/context/component1";
 import Component2 from "./components/context/component2";
 import ParentContext from "./components/context/parentComponent";
 import HelperFunction from './components/helper_functions';
-import ArrayFunctions from './components/arrays_of_functions'
+import ArrayFunctions from './components/arrays_of_functions';
+import CustomHook from './components/custom hooks/customHook';
+import PromisesAsyncAwait from './components/promises';
+import SearchFilter from './components/search_filter';
 
 const LazyComponent = lazy(() => import('./components/lazyLoading'));
 
@@ -28,7 +31,7 @@ function App() {
     <MyContextProvider>
     <ParentContext>
 
-          <p>Hello World</p>
+          <h2 style={{color:"red"}}>React Basic Concepts Practice</h2>
           <Map_filter />
           <State />
           <Parent />
@@ -41,10 +44,14 @@ function App() {
           <Component1 />
           <Component2 />
           <Suspense fallback={<div>Loading...</div>}>
-            <LazyComponent />
+          <LazyComponent />
           </Suspense>
           <HelperFunction/>
           <ArrayFunctions />
+          <CustomHook />
+          <PromisesAsyncAwait />
+          <SearchFilter />
+
     </ParentContext>
     </MyContextProvider>
   );
