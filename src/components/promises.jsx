@@ -45,7 +45,7 @@ const PromisesAsyncAwait = () =>{
             <h3>Async Await Usage</h3>
             <button onClick={handleAsyncAwait}>Click to start asyncronous task using async await</button>
             {flag2 && (
-                <div>Code executed successfully using then and catch</div>
+                <div>Code executed successfully using async and await</div>
             )}
         </>
     )
